@@ -144,7 +144,7 @@ public class DoublyLinkedList<T> {
         if (size == 0) return null;
         T data = head.getData();
         head = head.next();
-        head.setPrevious(null);
+        if (head != null) head.setPrevious(null);
         size--;
         return data;
     }
